@@ -1,7 +1,7 @@
 # OLED Advanced Stats Display Script For Raspberry Pi
 
 - [Information](#information)
-- [Wiring](#wiring)
+- [Setup your display](#setup-your-display)
 - [Installation guide](#installation-guide)
 - [Configuration](#configuration)
 - [Testing](#testing)
