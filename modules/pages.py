@@ -23,15 +23,6 @@ import psutil
 # Additional project modules
 
 
-# Definitions
-KB = 1024
-MB = KB * 1024
-GB = MB * 1024
-
-NET_KB = 1000
-NET_MB = NET_KB * 1000
-NET_GB = NET_MB * 1000
-
 # Display
 PORT = 1
 ADDRESS = 0x3C
@@ -41,7 +32,15 @@ HEIGHT = 64
 serial = i2c(port=PORT, address=ADDRESS)
 device = sh1106(serial, width=128, height=64)
 
-# Font
+# Definitions
+KB = 1024
+MB = KB * 1024
+GB = MB * 1024
+
+NET_KB = 1000
+NET_MB = NET_KB * 1000
+NET_GB = NET_MB * 1000
+
 FONTSIZE = 16
 
 # Display positions
