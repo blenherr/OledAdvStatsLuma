@@ -14,7 +14,7 @@
 The popular Raspberry Pi OLED Stats scripts tend to be very limited, so i created my own project.
 
 Features:
-- [luma.oled](https://github.com/rm-hull/luma.oled)
+- ![luma.oled](https://github.com/rm-hull/luma.oled)
 - Set up multiple pages of your choice
 - Auto mode: Flip through pages(Slideshow)
 - Manual mode: Controlled by at least one button
@@ -34,12 +34,7 @@ Pages:
 
 # Wiring
 ## Display
-| OLED Pin | Pi GPIO Pin | Notes   |
-|:---------|:------------|:--------|
-| VCC      | 1           | 3.3V    |
-| GND      | 9           | Ground  |
-| SCL      | 5           | I2C SCL |
-| SDA      | 3           | I2C SDA |
+See ![https://github.com/rm-hull/luma.oled](https://github.com/rm-hull/luma.oled)
 ## Button(s)
 Any GPIO pin you like. Connected to GND (Ground) which is pulled up internally by Raspberry Pi
 
