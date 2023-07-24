@@ -14,7 +14,7 @@
 The popular Raspberry Pi OLED Stats scripts tend to be very limited, so i created my own project.
 
 Features:
-- ![luma.oled](https://github.com/rm-hull/luma.oled)
+- ![luma.oled](https://github.com/rm-hull/luma.oled) display drivers for SSD1306 / SSD1309 / SSD1322 / SSD1325 / SSD1327 / SSD1331 / SSD1351 / SSD1362 / SH1106 / SH1107 / WS0010
 - Set up multiple pages of your choice
 - Auto mode: Flip through pages(Slideshow)
 - Manual mode: Controlled by at least one button
