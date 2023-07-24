@@ -32,8 +32,21 @@ Pages:
 | Page Network              | Page Docker               |
 | ![Page Network](https://user-images.githubusercontent.com/122442255/216108996-47804d36-f2cc-4833-8674-c3b6c526278b.gif) | ![Page Docker](https://user-images.githubusercontent.com/122442255/216109067-96720283-c834-4be4-b8bc-fe699c7600cb.gif) |
 
-# Wiring
-## Display
+# Setup your display
+See ![https://github.com/rm-hull/luma.oled](https://github.com/rm-hull/luma.oled)
+## Coding
+You will need to edit ![modules/pages.py](https://github.com/blenherr/OledAdvStatsLuma/blob/main/modules/pages.py) python script to your needs.
+```
+# Display
+PORT = 1
+ADDRESS = 0x3C
+WIDTH = 128
+HEIGHT = 64
+# Initialize device
+serial = i2c(port=1, address=ADDRESS)
+device = sh1106(serial, width=128, height=64)
+```
+## Wiring
 See ![https://github.com/rm-hull/luma.oled](https://github.com/rm-hull/luma.oled)
 ## Button(s)
 Any GPIO pin you like. Connected to GND (Ground) which is pulled up internally by Raspberry Pi
