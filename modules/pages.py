@@ -37,7 +37,7 @@ PORT = 1
 ADDRESS = 0x3C
 WIDTH = 128
 HEIGHT = 64
-# Initialize i2c and device
+# Initialize device
 serial = i2c(port=PORT, address=ADDRESS)
 device = sh1106(serial, width=128, height=64)
 
