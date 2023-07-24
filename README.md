@@ -14,7 +14,7 @@
 The popular Raspberry Pi OLED Stats scripts tend to be very limited, so i created my own project.
 
 Features:
-- SSD1306 OLED Display I2C
+- [luma.oled](https://github.com/rm-hull/luma.oled)
 - Set up multiple pages of your choice
 - Auto mode: Flip through pages(Slideshow)
 - Manual mode: Controlled by at least one button
@@ -127,12 +127,12 @@ sudo reboot
 ```
 ## 5. Clone git repository
 ```
-git clone https://github.com/blenherr/OledAdvStats.git
+git clone https://github.com/blenherr/OledAdvStatsLuma.git
 ```
 # Configuration
 Edit `config.yml`
 ```
-nano ~/OledAdvStats/config/config.yml
+nano ~/OledAdvStatsLuma/config/config.yml
 ```
 Content of `config.yml` file:
 ```
@@ -260,13 +260,13 @@ buttons:
 ```
 # Testing
 ```
-python3 ~/OledAdvStats/main.py
+python3 ~/OledAdvStatsLuma/main.py
 ```
 # Add service OR crontab
 ## Add service
-Create `OledAdvStats.service` file
+Create `OledAdvStatsLuma.service` file
 ```
-sudo nano /lib/systemd/system/OledAdvStats.service
+sudo nano /lib/systemd/system/OledAdvStatsLuma.service
 ```
 Add following lines and change `your_user_goes_here` with your own user
 ```
@@ -277,7 +277,7 @@ Description=OLED Advanced Stats Display Script For Raspberry Pi
 Type=simple
 User=your_user_goes_here
 Group=your_user_goes_here
-ExecStart=/usr/bin/python3 /home/your_user_goes_here/OledAdvStats/main.py
+ExecStart=/usr/bin/python3 /home/your_user_goes_here/OledAdvStatsLuma/main.py
 Restart=on-failure
 RestartSec=60
 
@@ -288,11 +288,11 @@ Save and close
 
 Enable service
 ```
-sudo systemctl enable OledAdvStats
+sudo systemctl enable OledAdvStatsLuma
 ```
 Start service
 ```
-sudo systemctl start OledAdvStats
+sudo systemctl start OledAdvStatsLuma
 ```
 ## Add crontab
 Edit crontab
@@ -301,7 +301,7 @@ crontab -e
 ```
 Add following lines at the bottom and change `your_user_goes_here` with your own user
 ```
-@reboot python3 /home/your_user_goes_here/OledAdvStats/main.py &
+@reboot python3 /home/your_user_goes_here/OledAdvStatsLuma/main.py &
 ```
 Save and close
 
