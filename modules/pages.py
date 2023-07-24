@@ -33,9 +33,15 @@ NET_MB = NET_KB * 1000
 NET_GB = NET_MB * 1000
 
 # Display
+PORT = 1
 ADDRESS = 0x3C
 WIDTH = 128
 HEIGHT = 64
+# Initialize i2c and device
+serial = i2c(port=PORT, address=ADDRESS)
+device = sh1106(serial, width=128, height=64)
+
+# Font
 FONTSIZE = 16
 
 # Display positions
@@ -47,10 +53,6 @@ LINE1 = TOP                 # Y position line 1
 LINE2 = TOP + FONTSIZE      # Y position line 2
 LINE3 = TOP + 2 * FONTSIZE  # Y position line 3
 LINE4 = TOP + 3 * FONTSIZE  # Y position line 3
-
-# Initialize i2c and device
-serial = i2c(port=1, address=ADDRESS)
-device = sh1106(serial, width=128, height=64)
 
 # Path
 REAL_PATH = os.path.dirname(os.path.realpath(__file__))
