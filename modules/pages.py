@@ -36,11 +36,9 @@ device = sh1106(serial, width=128, height=64)
 KB = 1024
 MB = KB * 1024
 GB = MB * 1024
-
 NET_KB = 1000
 NET_MB = NET_KB * 1000
 NET_GB = NET_MB * 1000
-
 FONTSIZE = 16
 
 # Display positions
