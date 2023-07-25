@@ -63,7 +63,7 @@ sudo apt install -y python3 python3-pip i2c-tools git
 ```
 Install pip packages
 ```
-pip3 install pyyaml psutil adafruit-circuitpython-ssd1306
+pip3 install pyyaml psutil luma.oled
 ```
 ## 3. Enable I2C interface
 Enabling I2C on the Raspberry Pi using one simple command
