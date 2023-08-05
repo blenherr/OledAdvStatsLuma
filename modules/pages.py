@@ -385,6 +385,7 @@ class CpuMem:
                     DRAW.text((RIGHT, LINE4), buffer,
                               font=FONT, fill=255, anchor="ra")
         except Exception as e:
+            print(e)
             if not CpuMem.__error_printed:
                 logging.exception(e)
                 CpuMem.__error_printed = True
@@ -479,6 +480,7 @@ class Storage:
                         DRAW.text((RIGHT, LINE4), buffer,
                                   font=FONT, fill=255, anchor="ra")
         except Exception as e:
+            print(e)
             if not Storage.__error_printed:
                 logging.exception(e)
                 Storage.__error_printed = True
@@ -525,6 +527,7 @@ class Network:
                 if addr.family is socket.AddressFamily.AF_INET:
                     return addr.address
         except Exception as e:
+            print(e)
             logging.exception(e)
         return res
 
@@ -623,6 +626,7 @@ class Network:
                         DRAW.text((RIGHT, LINE4), buffer,
                                   font=FONT, fill=255, anchor="ra")
         except Exception as e:
+            print(e)
             if not Network.__error_printed:
                 logging.exception(e)
                 Network.__error_printed = True
@@ -660,6 +664,7 @@ class Docker:
             ).decode('utf-8')[:-2]
             Docker.__state_list = output_str.split(',\n')
         except Exception as e:
+            print(e)
             logging.exception(e)
             return False
 
@@ -671,6 +676,7 @@ class Docker:
                                                        shell=True, stderr=subprocess.STDOUT).decode('utf-8').replace('%', '')[:-2] + ']'
             Docker.__usage_json = json.loads(output_str)
         except Exception as e:
+            print(e)
             logging.exception(e)
 
     @staticmethod
@@ -695,6 +701,7 @@ class Docker:
                 if Docker.__thread.is_alive():
                     Docker.__thread = None
         except Exception as e:
+            print(e)
             logging.exception(e)
 
     @staticmethod
@@ -786,6 +793,7 @@ class Docker:
                         DRAW.text((RIGHT, LINE4), buffer,
                                   font=FONT, fill=255, anchor="ra")
         except Exception as e:
+            print(e)
             if not Docker.__error_printed:
                 logging.exception(e)
                 Docker.__error_printed = True
