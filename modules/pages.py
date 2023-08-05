@@ -445,7 +445,7 @@ class Storage:
                         disk_usage = psutil.disk_usage(mount_point)
                         # Line 1 - Mount point
                         buffer = 'MOUNT  ' + mount_point
-                        if DRAW.textsize(buffer, font=FONT)[0] <= WIDTH:
+                        if DRAW.textlength(buffer, font=FONT) <= WIDTH:
                             DRAW.text((LEFT, LINE1), 'MOUNT',
                                       font=FONT, fill=255)
                             buffer = mount_point
